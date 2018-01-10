@@ -7,7 +7,7 @@ Déjà on peut tester dans form-person.js de faire une instance en dur de la Per
 4) Dans le fichier form-person.js, ajouter un event au submit du formulaire html qui récupérera les différentes valeurs des inputs
 Les afficher en console, pour voir que ça fonctionne déjà
 5) Dans l'event du submit, une fois qu'on arrive bien à récupérer les infos, utiliser ces mêmes info pour créer une instance de Person puis en faire un console.log
-#f00640767f990b2d360d2d17781ae9a359240c20
+[commit](#f00640767f990b2d360d2d17781ae9a359240c20)
 
 
 II. "Stocker" et afficher les personnes ([Person](www/scripts/person.js), [formulaire js](www/scripts/form-person.js), [formulaire html](www/form-person.html))
@@ -16,7 +16,7 @@ Maintenant qu'on arrive à créer des instances de personne via le formulaire, l
 2) Faire une fonction display qui va faire une boucle sur le tableau de person et faire un console log de chacune des personnes. On lancera cette fonction au chargement de la page puis à chaque validation du formulaire
 3) Ajouter à la classe Person une méthode toHTML() qui renverra la personne sous forme de html (soit sous forme de string, soit sous forme d'élément DOM) qu'on pourra append là où on veut
 4) Modifier la fonction display pour faire qu'elle utilise la méthode toHTML() de chaque personne pour les afficher
-#a8f090ec81b68a4e13482a7687a6f177888c1354
+[commit](#a8f090ec81b68a4e13482a7687a6f177888c1354)
 
 III. Héritage et Polymorphisme ([Person](www/scripts/person.js), [Developper](www/scripts/developper.js), [formulaire js](www/scripts/form-person.js), [formulaire html](www/form-person.html))
 Créer une nouvelle classe Developper qui héritera de la classe Person et se contentera d'ajouter une propriété languages et de redéfinir la méthode toHTML() pour modifier un peu l'affichage, modifier ensuite le formulaire pour faire soit un Developper soit une Person
