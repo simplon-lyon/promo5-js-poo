@@ -1,10 +1,24 @@
-let dev = new Developper('Janine', 'Lucy', 38, 'js, php, html/css');
-document.querySelector('body').appendChild(dev.toHTML());
-
-
-
+//On crée un tableau qui contiendra les Developper et les Person
 let tableau = [];
+//On lance la fonction display, au cas où on aurait des valeurs par
+//défaut, dans notre cas, c'est inutile
 display();
+
+//On capture l'input checkbox isDev
+let checkDev = document.querySelector('#isDev');
+//On ajoute un event quand la valeur de la checkbox change
+checkDev.addEventListener('change', function() {
+    //On récupère le fieldset à afficher/cacher
+    let fieldset = document.querySelector('#dev');
+    //si la checkbox est cochée
+    if(checkDev.checked) {
+        //On affiche le fieldset
+        fieldset.style.display = 'block';
+    } else {
+        //sinon, on cache le fieldset
+        fieldset.style.display = 'none';
+    }
+});
 
 //On capture le formulaire
 const formulaire = document.querySelector('#formulaire');
@@ -18,10 +32,25 @@ formulaire.addEventListener('submit', function(event){
     let surname = document.querySelector('#surname').value;
     let age = document.querySelector('#age').value;
     let isDev = document.querySelector('#isDev').checked;
+    
+    //On déclare la variable person hors du if-else pour qu'elle soit
+    //accessible en dessous
+    let person;
+    //Si la checkbox isDev est cochée
+    if(isDev) {
+        //On récupère la valeur de l'input languages
+        let languages = document.querySelector('#languages').value;
+        //et on crée une instance de Developper
+        person = new Developper(name,surname,age,languages);
 
-    //On crée une instance de Person en utilisant les info du formulaire
-    let person = new Person(name, surname, age);
-    //On ajoute l'instance de Person qu'on vient de créer dans le tableau
+    } else {
+        //sinon
+        //On crée une instance de Person en utilisant les info du formulaire
+        person = new Person(name, surname, age);
+        
+    }
+
+    //On ajoute l'instance de Person/Developper, qu'on vient de créer, dans le tableau
     tableau.push(person);
     //On lance la fonction pour mettre à jour l'affichage
     display();

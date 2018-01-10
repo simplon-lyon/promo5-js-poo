@@ -18,6 +18,13 @@
         <input type="number" name="age" id="age">
         <label for="isDev">Are they a developper ?</label>
         <input type="checkbox" name="isDev" id="isDev">
+        <!-- On ajoute un fieldset pour les developpers, et on
+        le cache par défaut, le faire directement dans l'attribut
+        style n'est pas une bonne pratique, mais c'est possible -->
+        <fieldset id="dev" style="display:none;">
+            <label for="languages">Languages : </label>
+            <input type="text" name="languages" id="languages">
+        </fieldset>
 
         <button type="submit">Go</button>
     </form>
