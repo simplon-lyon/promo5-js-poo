@@ -6,4 +6,4 @@ services:
       - ./conf.d:/etc/nginx/conf.d:ro
       - ./www:/var/www/default:ro
     ports:
-      - "8080:8080"
+      - "80:80"

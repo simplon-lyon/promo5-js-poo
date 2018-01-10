@@ -1,3 +1,8 @@
+let dev = new Developper('Janine', 'Lucy', 38, 'js, php, html/css');
+document.querySelector('body').appendChild(dev.toHTML());
+
+
+
 let tableau = [];
 display();
 
@@ -15,7 +20,7 @@ formulaire.addEventListener('submit', function(event){
     let isDev = document.querySelector('#isDev').checked;
 
     //On crée une instance de Person en utilisant les info du formulaire
-    let person = new Person(name, surname, age, isDev);
+    let person = new Person(name, surname, age);
     //On ajoute l'instance de Person qu'on vient de créer dans le tableau
     tableau.push(person);
     //On lance la fonction pour mettre à jour l'affichage
